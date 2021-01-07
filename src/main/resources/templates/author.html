@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>RentalSki</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<main>
+    <div class="pos-center">
+        <div th:include="heading"></div>
+
+        <div id="author">
+            <center><h1>Author</h1></center>
+            <div id="info">
+            <p><h3>Autorem aplikacji jest Grzegorz Dawidek.</h3> </p>
+            <p><h3>Student informatyki na Katolickim Uniwersytecie Lubelskim.</h3> </p>
+            <p><h3>Poziom kształcenia magister.</h3> </p>
+            </div>
+        </div>
+
+        <div th:include="footer"></div>
+    </div>
+</main>
+</body>
+</html>

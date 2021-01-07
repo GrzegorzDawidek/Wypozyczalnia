@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<main>
+    <nav id="heading">
+        <ul>
+            <li><a href="reservedarticle">Reserved Article</a>
+                        <li>
+            <li><a href="newarticle">New Article</a>
+            </li>
+            <li>
+                <a href="pilka"><b>Piłka</b><span class="caret"></span></a>
+            </li>
+            <li>
+                <a href="stroj"><b>Strój</b><span class="caret"></span></a>
+            </li>
+
+            <li>
+                <a href="rekawice"><b>Rękawice</b><span class="caret"></span></a>
+            </li>
+
+            <li sec:authorize="isAuthenticated()"><a th:href="@{logout}">Logout</a></li>
+        </ul>
+    </nav>
+</main>
+</body>
+</html>

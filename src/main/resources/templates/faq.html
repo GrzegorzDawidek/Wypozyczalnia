@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>RentalSki</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<main>
+    <div class="pos-center">
+        <div th:include="heading"></div>
+
+        <div id="author">
+            <center><h1>FAQ</h1></center>
+            <div id="contact" >
+
+                <center><h1>Czy można dokonać rezerwacji bez rejestracji?</h1>
+                    <h2>Jedyną dostepną opcją na rezerawację jest wcześniejsze założenie konta.</h2>
+                    <h1>Czy można zrezygnować z rezerwacji?</h1>
+                    <h2>Jeżeli chcemy zrezygnować z rezerwacji musimy skontaktować się z administracją.</h2>
+                    <h2>Dane kontaktowe w zakładce contact.</h2>
+                    <h1>W jaki sposób należy wybrać ostatni dzień wynajmu?</h1>
+                    <h2>Dzień podany w chwili rezerwacji odpowiada dacie ostatniej jazdy na nartach</h2>
+                    </center>
+            </div>
+        </div>
+
+        <div th:include="footer"></div>
+    </div>
+</main>
+</body>
+</html>

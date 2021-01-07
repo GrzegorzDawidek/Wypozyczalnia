@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>RentalSki</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<main>
+    <div class="pos-center">
+        <div th:include="heading"></div>
+
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th class="text-center">Photo</th>
+                <th class="text-center">Brand</th>
+                <th class="text-center">Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="articles : ${listArticles}" th:if="${articles.name} == 'pilka'">
+                <td>
+                    <a target="_blank" th:href="@{'/photos/' + ${articles.photoname} + '.png'}">
+                        <img th:src="@{'/photos/' + ${articles.photoname} + '.png'}" width="180px"
+                             height="150px"> </a></td>
+
+                <td th:text="${articles.brand}">Brand</td>
+
+                <td>
+                    <form action="#" th:action="@{/reservedarticle}" method="post">
+                        Choose a hours:
+
+                        <input type="time" th:id="'start-' + ${articles.id}" name="startreserve"  required/>
+                        -
+                        <input type="time" th:id="'end-' + ${articles.id}" name="endreserve"  required/>
+
+                        <br>Choose start date:
+                        <input type="date" name="reservedate" required/>
+                        <input type="hidden" th:value="*{articles.id}" name="articleid">
+                        <button class="btn btn-primary" type="submit">Save</button>
+                    </form>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div th:include="footer"></div>
+    </div>
+</main>
+<script th:src="@{/js/appjs.js}">
+</script>
+</body>
+</html>
